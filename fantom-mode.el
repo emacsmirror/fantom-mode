@@ -125,7 +125,9 @@
 (define-derived-mode fantom-mode prog-mode "Fantom"
   "A major mode for the Fantom programming language."
   :syntax-table fantom-mode-syntax-table
-  (setq-local font-lock-defaults '(fantom-font-lock-keywords)))
+  (setq-local font-lock-defaults '(fantom-font-lock-keywords))
+  (setq-local comment-start "// ")
+  (setq-local comment-end ""))
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.fan\\'" . fantom-mode))
